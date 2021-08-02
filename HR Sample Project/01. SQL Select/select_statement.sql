@@ -5,7 +5,7 @@ FROM employees
 /*Select all people from the “employees” table whose first name is “Alex”.*/
 SELECT *
 FROM employees
-WHERE	first_name LIKE '%Alex%';
+WHERE first_name LIKE '%Alex%';
 
 /*Retrieve employee with last name is "Hunold" and "Khoo".*/
 SELECT *
