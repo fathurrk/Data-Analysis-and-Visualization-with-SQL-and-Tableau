@@ -58,3 +58,4 @@ CREATE TABLE dependents (
 	employee_id INTEGER NOT NULL,
 	FOREIGN KEY (employee_id) REFERENCES employees (employee_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
