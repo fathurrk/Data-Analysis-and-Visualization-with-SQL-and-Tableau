@@ -15,9 +15,9 @@ SELECT		CONCAT(a.first_name, ' ', a.last_name) as "Full Name",
 		a.salary,
 		b.min_salary,
 		b.max_salary,
-		b.max_salary - a.salary AS "Rate Salary"
+		b.max_salary - a.salary AS "Gap Salary"
 FROM		employees a
 LEFT JOIN	jobs b ON a.job_id = b.job_id
-ORDER BY	"Rate Salary" ASC;
+ORDER BY	"Gap Salary" ASC;
 
 
