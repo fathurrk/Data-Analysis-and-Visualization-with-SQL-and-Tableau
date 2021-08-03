@@ -1,5 +1,5 @@
 /*Question 1 : Can you show and breakdown our employee hire_date by Years and Months and calculate which Year is the highest employee that join in our company?*/
-SELECT 		          EXTRACT(YEAR FROM hire_date) as "Year of Date",
+SELECT              EXTRACT(YEAR FROM hire_date) as "Year of Date",
                     COUNT(CASE WHEN EXTRACT(MONTH FROM hire_date) = 1 THEN 1 END) AS "January",
                     COUNT(CASE WHEN EXTRACT(MONTH FROM hire_date) = 2 THEN 1 END) AS "February",
                     COUNT(CASE WHEN EXTRACT(MONTH FROM hire_date) = 3 THEN 1 END) AS "March",
