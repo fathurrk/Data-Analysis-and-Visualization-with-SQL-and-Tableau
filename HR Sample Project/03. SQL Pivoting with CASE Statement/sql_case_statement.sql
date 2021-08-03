@@ -18,7 +18,7 @@ GROUP BY	          EXTRACT(YEAR FROM hire_date)
 ORDER BY	          "Total Count" DESC;
 
 /*Question 2 : Can you show and breakdown our employee "Salary" by Years and Months and calculate which Year is the highest Salary in our company?*/
-SELECT 		          EXTRACT(YEAR FROM hire_date) as "Year of Date",
+SELECT              EXTRACT(YEAR FROM hire_date) as "Year of Date",
                     COALESCE(SUM(CASE WHEN EXTRACT(MONTH FROM hire_date) = 1 THEN salary END),0) AS "January",
                     COALESCE(SUM(CASE WHEN EXTRACT(MONTH FROM hire_date) = 2 THEN salary END),0) AS "February",
                     COALESCE(SUM(CASE WHEN EXTRACT(MONTH FROM hire_date) = 3 THEN salary END),0) AS "March",
@@ -32,6 +32,6 @@ SELECT 		          EXTRACT(YEAR FROM hire_date) as "Year of Date",
                     COALESCE(SUM(CASE WHEN EXTRACT(MONTH FROM hire_date) = 11 THEN salary END),0) AS "November",
                     COALESCE(SUM(CASE WHEN EXTRACT(MONTH FROM hire_date) = 12 THEN salary END),0) AS "December",
                     SUM(CASE WHEN EXTRACT(MONTH FROM hire_date) BETWEEN 1 AND 12 THEN salary END) AS "Total Salary"
-FROM 		            employees
+FROM                employees
 GROUP BY	          EXTRACT(YEAR FROM hire_date)
 ORDER BY	          "Total Salary" DESC;
