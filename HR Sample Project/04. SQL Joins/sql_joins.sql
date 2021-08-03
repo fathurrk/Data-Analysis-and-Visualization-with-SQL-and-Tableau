@@ -11,11 +11,11 @@ ORDER BY	max_salary DESC;
 /*Show all employee which has the nearest max salary!*/
 /*to show the nearest max salary, i have to subtract "max_salary" and "salary" so i can get the result*/
 SELECT		CONCAT(a.first_name, ' ', a.last_name) as "Full Name",
-			b.job_title,
-			a.salary,
-			b.min_salary,
-			b.max_salary,
-			b.max_salary - a.salary AS "Rate Salary"
+		b.job_title,
+		a.salary,
+		b.min_salary,
+		b.max_salary,
+		b.max_salary - a.salary AS "Rate Salary"
 FROM		employees a
 LEFT JOIN	jobs b ON a.job_id = b.job_id
 ORDER BY	"Rate Salary" ASC;
