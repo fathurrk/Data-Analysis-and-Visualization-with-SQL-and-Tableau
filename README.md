@@ -14,7 +14,7 @@
 + Compare amount salary and Number of employees in each regions
 + Show total hire in each year
 
-### [Cryptocurrency Project](Cryptocurrency%20Project)
+### [Cryptocurrency Project](Cryptocurrency-Project)
 Helping the investor to know about trends of Doge Coin, so we will determine the variable of :
 + Market Capitalization
 + Volume
